@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farah Khan Spa - Luxury Massage & Wellness Center</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo"><img src="logo.png" alt="Farah Khan Spa" class="logo-img"> Farah Khan Spa</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Relax & Rejuvenate</h1>
+        <p>Experience luxury spa treatments in a serene environment</p>
+        <a href="#contact" class="cta-button">Book an Appointment</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Farah Khan Spa</h2>
+            <div class="about-content">
+                <div>
+                    <h3>Welcome to Our Sanctuary</h3>
+                    <p>Farah Khan Spa is dedicated to providing the highest quality massage and wellness services in a peaceful, luxurious environment. With over 15 years of experience, our team of certified therapists is committed to your wellbeing.</p>
+                    <p>We use only premium, natural products and traditional techniques combined with modern spa practices to ensure you receive the best treatment possible.</p>
+                    <p>Whether you're seeking relief from stress, muscle tension, or simply want to pamper yourself, our spa is your perfect getaway.</p>
+                </div>
+                <div>
+                    <img src="spa-about.jpeg" alt="Spa Interior" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info-only">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Address</strong><br>
+                            DHA Phase-5,07400, <br> Karachi,Pakistan
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Phone</strong><br>
+                            <a href="tel:+92324 5540898" style="color: #333; text-decoration: none;">+92324 5540898</a>
+                        </div>
+                    </div>
+
+                    <!-- <div class="contact-info-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:info@farahkhan-spa.com" style="color: #333; text-decoration: none;">info@farahkhan-spa.com</a>
+                        </div>
+                    </div> -->
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">🕐</div>
+                        <div>
+                            <strong>Hours</strong><br>
+                            Mon - Fri: 10am - 8pm<br>
+                            Sat - Sun: 11am - 6pm
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Farah Khan Spa. All rights reserved.</p>
+            <p>Providing premium spa and wellness services</p>
+            <!-- <div class="social-links">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Twitter</a>
+            </div> -->
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
