@@ -385,34 +385,162 @@ footer p {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    nav {
+        padding: 0 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 80px 1rem;
+        min-height: 400px;
+    }
+
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
     }
 
     .hero p {
         font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
     }
 
     section h2 {
         font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    section {
+        padding: 2rem 0;
     }
 
     .about-content,
     .contact-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .contact-info {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.75rem 0;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .logo-img {
+        height: 32px;
+        width: 32px;
     }
 
     .hero {
-        padding: 100px 1rem;
+        padding: 60px 1rem;
+        min-height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    section h2::after {
+        width: 40px;
     }
 
     section {
-        padding: 2rem 0;
+        padding: 1.5rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .about-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+    }
+
+    .service-card {
+        padding: 1rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-info-item {
+        gap: 0.75rem;
+    }
+
+    .contact-icon {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
     }
 }
