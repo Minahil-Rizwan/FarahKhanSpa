@@ -16,7 +16,6 @@ body {
     color: #333;
 }
 
-/* HEADER */
 header {
     background: linear-gradient(135deg, #2c3e50 0%, #3d5a6c 100%);
     padding: 1rem 0;
@@ -60,7 +59,7 @@ nav a:hover {
     color: #e8d4b8;
 }
 
-/* HERO */
+
 .hero {
     background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 73, 94, 0.7));
     background-color: #3d5a6c;
@@ -85,7 +84,6 @@ nav a:hover {
     margin-bottom: 2rem;
 }
 
-/* BUTTON */
 .cta-button {
     background: #e8d4b8;
     color: #2c3e50;
@@ -104,7 +102,7 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* LAYOUT */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -214,25 +212,24 @@ footer p {
         gap: 1rem;
     }
 
-    nav ul {
+nav ul {
         justify-content: center;
         gap: 1rem;
     }
 
-    .hero {
+.hero {
         padding: 80px 1rem;
         min-height: 400px;
     }
 
-    section {
+section {
         padding: 2.5rem 0;
     }
-
-    section h2 {
+ section h2 {
         font-size: 2rem;
     }
 
-    .about-content {
+.about-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -244,24 +241,24 @@ footer p {
         padding: 0.75rem 1rem;
     }
 
-    .logo {
+.logo {
         font-size: 1.2rem;
     }
 
-    .hero {
+.hero {
         padding: 60px 1rem;
         min-height: 300px;
     }
 
-    section h2 {
+section h2 {
         font-size: 1.5rem;
     }
 
-    .container {
+.container {
         padding: 0 1rem;
     }
 
-    .cta-button {
+.cta-button {
         padding: 0.7rem 1.5rem;
         font-size: 0.9rem;
     }
@@ -270,7 +267,7 @@ footer p {
 </head>
 <body>
 
-    <header>
+<header>
         <nav>
             <div class="logo">Farah Khan Spa</div>
             <ul>
@@ -281,13 +278,13 @@ footer p {
         </nav>
     </header>
 
-    <section class="hero" id="home">
+<section class="hero" id="home">
         <h1>Relax & Rejuvenate</h1>
         <p>Experience luxury spa treatments in a serene environment</p>
         <a href="#contact" class="cta-button">Book an Appointment</a>
     </section>
 
-    <section id="about">
+<section id="about">
         <div class="container">
             <h2>About Farah Khan Spa</h2>
             <div class="about-content">
@@ -304,14 +301,14 @@ footer p {
         </div>
     </section>
 
-    <section id="contact">
+<section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
             <div class="contact-info-only">
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
 
-                    <div class="contact-info-item">
+<div class="contact-info-item">
                         <div class="contact-icon">📍</div>
                         <div>
                             <strong>Address</strong><br>
@@ -319,7 +316,7 @@ footer p {
                         </div>
                     </div>
 
-                    <div class="contact-info-item">
+<div class="contact-info-item">
                         <div class="contact-icon">📞</div>
                         <div>
                             <strong>Phone</strong><br>
@@ -327,7 +324,7 @@ footer p {
                         </div>
                     </div>
 
-                    <div class="contact-info-item">
+<div class="contact-info-item">
                         <div class="contact-icon">🕐</div>
                         <div>
                             <strong>Hours</strong><br>
@@ -338,16 +335,16 @@ footer p {
                 </div>
             </div>
         </div>
-    </section>
+</section>
 
-    <footer>
+<footer>
         <div class="container">
             <p>&copy; 2024 Farah Khan Spa. All rights reserved.</p>
             <p>Providing premium spa and wellness services</p>
         </div>
     </footer>
 
-    <script>
+<script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
