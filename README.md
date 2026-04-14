@@ -1,596 +1,269 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farah Khan Spa - Luxury Massage & Wellness Center</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3d5a6c 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e8d4b8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #e8d4b8;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 73, 94, 0.7));
+            background-color: #3d5a6c;
+            color: white;
+            text-align: center;
+            padding: 150px 2rem;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background: #e8d4b8;
+            color: #2c3e50;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #d4c4a8;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #e8d4b8;
+        }
+
+        #about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .about-content p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-content img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        #contact {
+            background: #f9f7f4;
+        }
+
+        .contact-info-only {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .contact-info h3 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            align-items: start;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .logo { font-size: 1.4rem; }
+
+            nav ul { gap: 1.2rem; }
+
+            .hero {
+                padding: 80px 1rem;
+                min-height: 400px;
+            }
+
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+
+            section h2 { font-size: 2rem; }
+            section { padding: 2rem 0; }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                padding: 0.75rem 1rem;
+                gap: 0.75rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .logo { font-size: 1.2rem; }
+
+            .hero {
+                padding: 60px 1rem;
+                min-height: 300px;
+            }
+
+            .hero h1 { font-size: 1.6rem; }
+            .hero p { font-size: 0.9rem; }
+
+            .cta-button {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            section h2 { font-size: 1.5rem; }
+            .container { padding: 0 1rem; }
+        }
+    </style>
 </head>
-    <!-- <style>
-        {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* Header & Navigation */
-header {
-    background: linear-gradient(135deg, #2c3e50 0%, #3d5a6c 100%);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #e8d4b8;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.logo-img {
-    height: 40px;
-    width: 40px;
-    object-fit: contain;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-    font-size: 1rem;
-}
-
-nav a:hover {
-    color: #e8d4b8;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 73, 94, 0.7)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="spa" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="30" fill="%23e8d4b8" opacity="0.1"/></pattern></defs><rect width="1200" height="600" fill="%23f5f5f5"/><rect width="1200" height="600" fill="url(%23spa)"/></svg>');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 150px 2rem;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.hero p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-}
-
-.cta-button {
-    background: #e8d4b8;
-    color: #2c3e50;
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-weight: bold;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.cta-button:hover {
-    background: #d4c4a8;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* Sections */
-section {
-    padding: 4rem 0;
-}
-
-section h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #2c3e50;
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: #e8d4b8;
-}
-
-/* Services Section */
-#services {
-    background: #f9f7f4;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.service-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    color: #2c3e50;
-}
-
-.service-card .price {
-    font-size: 1.3rem;
-    color: #e8d4b8;
-    font-weight: bold;
-    margin: 1rem 0;
-}
-
-.service-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-/* About Section */
-#about {
-    background: white;
-}
-
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.about-content img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.about-content h3 {
-    color: #2c3e50;
-    margin: 1rem 0;
-    font-size: 1.8rem;
-}
-
-.about-content p {
-    color: #666;
-    margin-bottom: 1rem;
-    line-height: 1.8;
-}
-
-/* Testimonials Section */
-#testimonials {
-    background: linear-gradient(135deg, #2c3e50 0%, #3d5a6c 100%);
-    color: white;
-}
-
-#testimonials h2 {
-    color: white;
-}
-
-#testimonials h2::after {
-    background: #e8d4b8;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.testimonial-card {
-    background: rgba(255,255,255,0.1);
-    padding: 2rem;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.2);
-}
-
-.testimonial-card p {
-    margin-bottom: 1rem;
-    font-style: italic;
-}
-
-.testimonial-author {
-    font-weight: bold;
-    color: #e8d4b8;
-}
-
-.stars {
-    color: #ffc107;
-    margin-bottom: 1rem;
-}
-
-/* Contact Section */
-#contact {
-    background: #f9f7f4;
-}
-
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-}
-
-.contact-info {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact-info-only {
-    display: flex;
-    justify-content: center;
-}
-
-.contact-info h3 {
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
-}
-
-.contact-info-item {
-    margin-bottom: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    align-items: start;
-}
-
-.contact-icon {
-    font-size: 1.5rem;
-    color: #e8d4b8;
-    margin-top: 0.2rem;
-}
-
-.contact-form {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #2c3e50;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #e8d4b8;
-    box-shadow: 0 0 5px rgba(232, 212, 184, 0.3);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.submit-btn {
-    background: #2c3e50;
-    color: white;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
-    width: 100%;
-}
-
-.submit-btn:hover {
-    background: #34495e;
-}
-
-/* Footer */
-footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-}
-
-footer p {
-    margin: 0.5rem 0;
-}
-
-.social-links {
-    margin-top: 1rem;
-}
-
-.social-links a {
-    color: #e8d4b8;
-    text-decoration: none;
-    margin: 0 1rem;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: white;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    section h2 {
-        font-size: 2rem;
-    }
-
-    .about-content,
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        padding: 100px 1rem;
-    }
-
-    section {
-        padding: 2rem 0;
-    }
-
-    @media (max-width: 1024px) {
-    .container {
-        padding: 0 1.5rem;
-    }
-
-    nav {
-        padding: 0 1.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    nav a {
-        font-size: 0.9rem;
-    }
-
-    .hero {
-        padding: 80px 1rem;
-        min-height: 400px;
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .cta-button {
-        padding: 0.8rem 2rem;
-        font-size: 1rem;
-    }
-
-    section h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    section {
-        padding: 2rem 0;
-    }
-
-    .about-content,
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .service-card {
-        padding: 1.5rem;
-    }
-
-    .contact-info {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 0.75rem 0;
-    }
-
-    nav {
-        flex-direction: column;
-        padding: 0 1rem;
-        gap: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 0.8rem;
-        width: 100%;
-    }
-
-    nav a {
-        font-size: 0.85rem;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .logo-img {
-        height: 32px;
-        width: 32px;
-    }
-
-    .hero {
-        padding: 60px 1rem;
-        min-height: 300px;
-    }
-
-    .hero h1 {
-        font-size: 1.6rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-    }
-
-    .cta-button {
-        padding: 0.7rem 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    section h2::after {
-        width: 40px;
-    }
-
-    section {
-        padding: 1.5rem 0;
-    }
-
-    .container {
-        padding: 0 1rem;
-    }
-
-    .about-content h3 {
-        font-size: 1.3rem;
-    }
-
-    .about-content p {
-        font-size: 0.9rem;
-    }
-
-    .service-card {
-        padding: 1rem;
-    }
-
-    .service-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .contact-info-item {
-        gap: 0.75rem;
-    }
-
-    .contact-icon {
-        font-size: 1.2rem;
-    }
-
-    nav ul {
-        gap: 0.5rem;
-    }
-}
-}
-    </style> -->
 <body>
-    <!-- Navigation -->
+
     <header>
         <nav>
-            <div class="logo"><img src="logo.png" alt="Farah Khan Spa" class="logo-img"> Farah Khan Spa</div>
+            <div class="logo">Farah Khan Spa</div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -599,14 +272,12 @@ footer p {
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <h1>Relax & Rejuvenate</h1>
         <p>Experience luxury spa treatments in a serene environment</p>
         <a href="#contact" class="cta-button">Book an Appointment</a>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2>About Farah Khan Spa</h2>
@@ -618,25 +289,24 @@ footer p {
                     <p>Whether you're seeking relief from stress, muscle tension, or simply want to pamper yourself, our spa is your perfect getaway.</p>
                 </div>
                 <div>
-                    <img src="spa-about.jpeg" alt="Spa Interior" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="spa-about.jpeg" alt="Spa Interior">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
             <div class="contact-info-only">
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
-                    
+
                     <div class="contact-info-item">
                         <div class="contact-icon">📍</div>
                         <div>
                             <strong>Address</strong><br>
-                            DHA Phase-5,07400, <br> Karachi,Pakistan
+                            DHA Phase-5, 07400,<br>Karachi, Pakistan
                         </div>
                     </div>
 
@@ -644,24 +314,16 @@ footer p {
                         <div class="contact-icon">📞</div>
                         <div>
                             <strong>Phone</strong><br>
-                            <a href="tel:+92324 5540898" style="color: #333; text-decoration: none;">+92324 5540898</a>
+                            <a href="tel:+923245540898" style="color: #333; text-decoration: none;">+92324 5540898</a>
                         </div>
                     </div>
-
-                    <!-- <div class="contact-info-item">
-                        <div class="contact-icon">✉️</div>
-                        <div>
-                            <strong>Email</strong><br>
-                            <a href="mailto:info@farahkhan-spa.com" style="color: #333; text-decoration: none;">info@farahkhan-spa.com</a>
-                        </div>
-                    </div> -->
 
                     <div class="contact-info-item">
                         <div class="contact-icon">🕐</div>
                         <div>
                             <strong>Hours</strong><br>
-                            Mon - Fri: 10am - 8pm<br>
-                            Sat - Sun: 11am - 6pm
+                            Mon – Fri: 10am – 8pm<br>
+                            Sat – Sun: 11am – 6pm
                         </div>
                     </div>
                 </div>
@@ -669,30 +331,22 @@ footer p {
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2024 Farah Khan Spa. All rights reserved.</p>
             <p>Providing premium spa and wellness services</p>
-            <!-- <div class="social-links">
-                <a href="#" target="_blank">Facebook</a>
-                <a href="#" target="_blank">Instagram</a>
-                <a href="#" target="_blank">Twitter</a>
-            </div> -->
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
+
 </body>
 </html>
