@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="styles.css">
 </head>
-    <style>
+    <!-- <style>
         {
     margin: 0;
     padding: 0;
@@ -425,7 +425,7 @@ footer p {
         padding: 2rem 0;
     }
 }
-    </style>
+    </style> -->
 <body>
     <!-- Navigation -->
     <header>
