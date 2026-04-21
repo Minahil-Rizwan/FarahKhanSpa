@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="logo.png">
+    
    <style>
 * {
     margin: 0;
@@ -35,11 +35,7 @@ nav {
     flex-wrap: wrap;
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #e8d4b8;
-}
+
 
 nav ul {
     list-style: none;
@@ -241,9 +237,7 @@ section {
         padding: 0.75rem 1rem;
     }
 
-.logo {
-        font-size: 1.2rem;
-    }
+
 
 .hero {
         padding: 60px 1rem;
@@ -269,7 +263,6 @@ section h2 {
 
 <header>
         <nav>
-            <div class="logo">Farah Khan Spa</div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
