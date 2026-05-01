@@ -340,6 +340,8 @@ section h2 {
     </footer>
 
 <script>
+    async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7804275617401531"
+     crossorigin="anonymous">
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
